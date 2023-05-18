@@ -28,7 +28,7 @@ namespace PMT.API.Data
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json")
                     .Build();
-            var connectionString = configuration.GetConnectionString("ProductDB");
+            var connectionString = configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
             optionsBuilder.UseSqlServer(connectionString);
 
         }
